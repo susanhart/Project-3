@@ -25,3 +25,13 @@ $("#design").on("change", function() {
         $("option[value='darkslategrey']").hide(); 
     }
 });
+$(".activities input").on("change", function() {
+    let name = $(this).attr('name')
+    console.log(name)
+    if (name==="js-frameworks") {
+        $("input[name='express']").attr("disabled", true);
+    }
+    if (name==="js-libs") {
+        $("input[name='node']").attr("disabled", true);
+    }    
+});
