@@ -16,7 +16,7 @@ $("#design").on("change", function() {
     }
     else if(value==="heart js") {
         $("option[value='tomato']").attr("selected", true);
-       $("option[value='cornflowerblue']").attr("selected", false);
+        $("option[value='cornflowerblue']").attr("selected", false);
         $("option[value='tomato']").show(); 
         $("option[value='steelblue']").show();
         $("option[value='dimgrey']").show(); 
