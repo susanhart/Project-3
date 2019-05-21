@@ -96,5 +96,5 @@ $(".activities input").on("change", function() {
             total-=cost    
         }
     }
-    $("#total").text(total)
+    $("#total").text("$"+total)
 });
