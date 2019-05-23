@@ -100,7 +100,7 @@ $(".activities input").on("change", function() {
 });
 // $('select option[value="credit card"]').attr("selected",true);
 //if ($("#select-box option[value='3']").attr('selected')) {
-if ($('#select-box option[value="credit card"]').attr['selected']) {
+if ($('#payment').val() == "credit card") {
     console.log("credit card selected")
 }
 $('select option[value="paypal"]').hide();
