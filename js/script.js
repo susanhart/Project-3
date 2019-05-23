@@ -98,10 +98,9 @@ $(".activities input").on("change", function() {
     }
     $("#total").text("$"+total)
 });
-// $('select option[value="credit card"]').attr("selected",true);
-//if ($("#select-box option[value='3']").attr('selected')) {
+
 if ($('#payment').val() == "credit card") {
     console.log("credit card selected")
-}
-$('select option[value="paypal"]').hide();
-$('select option[value="bitcoin"]').hide();
+}   else if ( $('#payment').val() == "paypal");
+//$('select option[value="paypal"]').hide();
+//$('select option[value="bitcoin"]').hide();
