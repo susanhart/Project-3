@@ -100,9 +100,6 @@ $(".activities input").on("change", function() {
 });
 
 if ($('#payment').val() == "credit card") {
-    $bitcoin.hide();
-    $payPal.hide();
-    $creditCard.show();
     console.log("credit card selected")
 }  // else if ( $('#payment').val() == "paypal");
 //$('select option[value="paypal"]').hide();
