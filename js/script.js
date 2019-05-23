@@ -98,6 +98,8 @@ $(".activities input").on("change", function() {
     }
     $("#total").text("$"+total)
 });
+//Hiding the first payment option: "Select payment method."
+$("#payment").find("option").eq(0).remove();
 
 if ($('#payment').val() == "credit card") {
     console.log("credit card selected")
