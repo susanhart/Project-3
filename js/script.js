@@ -108,27 +108,30 @@ $(".activities input").on("change", function() {
 //Hiding the first payment option: "Select payment method."
 $("#payment").find("option").eq(0).remove();
   
-//Default credit card payment method.
+//default credit card..
 $('#payment').val('credit card');
 $('#bitCoinMsg').hide();
 $('#paypalMsg').hide();
+
+
+//
 $('#payment').change(function(){
-    if( $(this).find(":selected").val() === 'paypal')
-    {
-      $('#paypalMsg').show();
-      $('#credit-card').hide();
-      $('#bitCoinMsg').hide();
-    }
-    if( $(this).find(":selected").val() === 'bitcoin')
-    {
-      $('#paypalMsg').hide();
-      $('#credit-card').hide();
-      $('#bitCoinMsg').show();
-    }
-    if( $(this).find(":selected").val() === 'credit card')
-    {
-      $('#paypalMsg').hide();
-      $('#credit-card').show();
-      $('#bitCoinMsg').hide();
-    }
-  });
+  if( $(this).find(":selected").val() === 'paypal')
+  {
+    $('#paypalMsg').show();
+    $('#credit-card').hide();
+    $('#bitCoinMsg').hide();
+  }
+  if( $(this).find(":selected").val() === 'bitcoin')
+  {
+    $('#paypalMsg').hide();
+    $('#credit-card').hide();
+    $('#bitCoinMsg').show();
+  }
+  if( $(this).find(":selected").val() === 'credit card')
+  {
+    $('#paypalMsg').hide();
+    $('#credit-card').show();
+    $('#bitCoinMsg').hide();
+  }
+});
