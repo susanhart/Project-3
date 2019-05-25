@@ -1,7 +1,14 @@
 let total=0
-$("#name").attr("focus", true);
+$("#name").focus();
 $("#job_role_other").hide();
 $("#select_theme").hide();
+$( "#title" ).change(function(x) {
+    if( $(this).find(":selected").val() === 'other'){
+      $('#job_role_other').show();
+    }else {
+      $('#job_role_other').hide();
+    }
+  });
 $("#design").on("change", function() {
    let value = $("#design").val()
    console.log(value)

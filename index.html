@@ -82,8 +82,8 @@
         <label><input type="checkbox" name="express" cost=100> Express Workshop — Tuesday 9am-12pm, $100</label>
         <label><input type="checkbox" name="node" cost=100> Node.js Workshop — Tuesday 1pm-4pm, $100</label>          
         <label><input type="checkbox" name="build-tools" cost=100> Build tools Workshop — Wednesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="npm" cost=100> npm Workshop — Wednesday 1pm-4pm, $100</label>
-          <p total=0 id="total"></p>        	
+        <label><input type="checkbox" name="npm" cost=100> npm Workshop — Wednesday 1pm-4pm, $100</label>  
+        Total: <span total=0 id="total"></span>       	
       </fieldset>
       <fieldset>
         <legend>Payment Info</legend>
@@ -91,7 +91,7 @@
         <label for="payment">I'm going to pay with:</label>
         <select id="payment" name="user_payment">
           <option value="select_method">Select Payment Method</option>
-          <option selected value="credit card">Credit Card</option>
+          <option value="credit card">Credit Card</option>
           <option value="paypal">PayPal</option>
           <option value="bitcoin">Bitcoin</option>
         </select>
