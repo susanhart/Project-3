@@ -110,6 +110,9 @@ $("#payment").find("option").eq(0).remove();
 
 if ($('#payment').val() == "credit card") {
     console.log("credit card selected")
-}  // else if ( $('#payment').val() == "paypal");
+}  
+//Default credit card payment method.
+$('#payment').val('credit card');
+// else if ( $('#payment').val() == "paypal");
 //$('select option[value="paypal"]').hide();
 //$('select option[value="bitcoin"]').hide();
