@@ -110,7 +110,8 @@ $("#payment").find("option").eq(0).remove();
   
 //Default credit card payment method.
 $('#payment').val('credit card');
-//
+$('#bitCoinMsg').hide();
+$('#paypalMsg').hide();
 $('#payment').change(function(){
     if( $(this).find(":selected").val() === 'paypal')
     {
