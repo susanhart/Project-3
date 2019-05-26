@@ -1,7 +1,10 @@
 let total=0
 $("#name").focus();
 $("#job_role_other").hide();
+$('#paymentMsg').hide();
+$('#nameMsg').hide();
 $("#select_theme").hide();
+$('#EmailMsg').hide();
 $( "#title" ).change(function(x) {
     if( $(this).find(":selected").val() === 'other'){
       $('#job_role_other').show();
@@ -113,9 +116,10 @@ $('#payment').val('credit card');
 $('#bitCoinMsg').hide();
 $('#paypalMsg').hide();
 
-
+var paymentOptionSelected = 'credit card';
 //Getting each payment option to show while hiding the other two payment options.
 $('#payment').change(function(){
+    $('#paymentMsg').hide();
   if( $(this).find(":selected").val() === 'paypal')
   {
     $('#paypalMsg').show();
@@ -135,3 +139,43 @@ $('#payment').change(function(){
     $('#bitCoinMsg').hide();
   }
 });
+$('#submitBtn').click(function(){
+
+    if(paymentOptionSelected == 'select_method')
+    {
+      $('#paymentMsg').show();
+      return;
+    }
+    else {
+      $('#paymentMsg').hide();
+    }
+    if( $('#name').val() == ''){
+        $('#nameMsg').show();
+        return;
+        }
+        if( $('#mail').val() == ''){
+            $('#EmailMsg').show();
+            return;
+            }  
+            if(total == 0)
+    {
+      alert("At least one activity must be selected.");
+      return;
+    }
+    if(paymentOptionSelected == 'credit card')
+    {
+        if( $('#cc-num').val() == ''){
+            alert("Credit Card Number is Missing.")
+            return;
+            } 
+            if( $('#zip').val() == ''){
+                alert("The zip code is missing.")
+                return;
+                } 
+                if( $('#cvv').val() == ''){
+                    alert("The CVV is missing.")
+                    return;
+                    } 
+            }  
+            alert("Congratulations you are now registered!")      
+  });
