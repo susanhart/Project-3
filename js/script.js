@@ -3,16 +3,16 @@ let total=0
 $("#name").focus();
 //Job Role Section
 //Include a text field that will be revealed when the "Other" option is selected from the "Job Role" drop down menu.
-$("#job_role_other").hide();
+$("#user_other_title").hide();
 $('#paymentMsg').hide();
 $('#nameMsg').hide();
 $("#select_theme").hide();
 $('#EmailMsg').hide();
 $( "#title" ).change(function(x) {
     if( $(this).find(":selected").val() === 'other'){
-      $('#job_role_other').show();
+      $('#user_other_title').show();
     }else {
-      $('#job_role_other').hide();
+      $('#user_other_title').hide();
     }
   });
   //T-Shirt Info Section
