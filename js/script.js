@@ -114,7 +114,7 @@ $('#bitCoinMsg').hide();
 $('#paypalMsg').hide();
 
 
-//
+//Getting each payment option to show while hiding the other two payment options.
 $('#payment').change(function(){
   if( $(this).find(":selected").val() === 'paypal')
   {
