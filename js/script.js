@@ -190,5 +190,6 @@ $('#submitBtn').click(function(){
                     } 
             }  
             //Set up an alert to let the user know their registration process is complete.
-            alert("Congratulations, you are now registered!")      
+            alert("Congratulations, you are now registered!")   
+            window.location.reload();   
   });
