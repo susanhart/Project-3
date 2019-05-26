@@ -10,10 +10,10 @@ $('#nameMsg').hide();
 $("#select_theme").hide();
 $('#EmailMsg').hide();
 $( "#title" ).change(function(x) {
-    if( $(this).find(":selected").val() === 'other'){
-      $('#other_title').show();
+    if( $(this).val() === 'other'){
+      $('#other-title').show();
     }else {
-      $('#other_title').hide();
+      $('#other-title').hide();
     }
   });
   //T-Shirt Info Section
