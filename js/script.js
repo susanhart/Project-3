@@ -50,7 +50,7 @@ $(".activities input").on("change", function() {
     let cost = $( "input[type=checkbox][name="+name+"]" ).attr("cost");
     cost = parseInt(cost)
     console.log(total)
-    //Preventing the user from scheduling workshops that meet at the same time.
+    //Preventing the user from scheduling workshops that conflict and meet at the same time.
     if (name==="js-frameworks") {
         if ($("input[name='express']").attr("disabled")) {
             $("input[name='express']").attr("disabled", false); 
