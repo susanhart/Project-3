@@ -1,5 +1,8 @@
 let total=0
+//Set focus on the first text field when the page first loads by default.
 $("#name").focus();
+//Job Role Section
+//Include a text field that will be revealed when the "Other" option is selected from the "Job Role" drop down menu.
 $("#job_role_other").hide();
 $('#paymentMsg').hide();
 $('#nameMsg').hide();
@@ -12,9 +15,12 @@ $( "#title" ).change(function(x) {
       $('#job_role_other').hide();
     }
   });
+  //T-Shirt Info Section
+  //For the T-Shirt "Color" menu, only display the color options that match the design selected in the "Design" menu.
 $("#design").on("change", function() {
    let value = $("#design").val()
    console.log(value)
+   //If the user selects "Theme - JS Puns" then the color menu should only display "Cornflower Blue," "Dark Slate Grey," and "Gold."
    if (value === "js puns") {
        $("option[value='tomato']").attr("selected", false);
        $("option[value='cornflowerblue']").attr("selected", true);
@@ -24,7 +30,8 @@ $("#design").on("change", function() {
        $("option[value='tomato']").hide();
        $("option[value='steelblue']").hide();
        $("option[value='dimgrey']").hide();
-    }
+    } 
+    //If the user selects "Theme - I ♥ JS" then the color menu should only display "Tomato," "Steel Blue," and "Dim Grey."
     else if(value==="heart js") {
         $("option[value='tomato']").attr("selected", true);
         $("option[value='cornflowerblue']").attr("selected", false);
@@ -36,12 +43,14 @@ $("#design").on("change", function() {
         $("option[value='darkslategrey']").hide(); 
     }
 });
+//Register for Activities Section
 $(".activities input").on("change", function() {
     let name = $(this).attr('name')
     // Get the value from a checked checkbox
     let cost = $( "input[type=checkbox][name="+name+"]" ).attr("cost");
     cost = parseInt(cost)
     console.log(total)
+    //Preventing the user from scheduling workshops that meet at the same time.
     if (name==="js-frameworks") {
         if ($("input[name='express']").attr("disabled")) {
             $("input[name='express']").attr("disabled", false); 
@@ -105,13 +114,14 @@ $(".activities input").on("change", function() {
         else  {
             total-=cost    
         }
-    }
+    }  
+    //Adding a running total amount of cost section to the Workshop section.
     $("#total").text("$"+total)
 });
 //Hiding the first payment option: "Select payment method."
 $("#payment").find("option").eq(0).remove();
   
-//default credit card..
+//Setting the credit card pyment option as the default option.
 $('#payment').val('credit card');
 $('#bitCoinMsg').hide();
 $('#paypalMsg').hide();
@@ -139,8 +149,9 @@ $('#payment').change(function(){
     $('#bitCoinMsg').hide();
   }
 });
+//Adding an event listener to the Register button.
 $('#submitBtn').click(function(){
-
+//Setting up the form validations with red error message notifications and alerts so that an incomplete form with unfilled boxes cannot complete the registration process.
     if(paymentOptionSelected == 'select_method')
     {
       $('#paymentMsg').show();
@@ -177,5 +188,6 @@ $('#submitBtn').click(function(){
                     return;
                     } 
             }  
-            alert("Congratulations you are now registered!")      
+            //Set up an alert to let the user know their registration process is complete.
+            alert("Congratulations, you are now registered!")      
   });
