@@ -21,6 +21,7 @@ $( "#title" ).change(function(x) {
 $("#design").on("change", function() {
    let value = $("#design").val()
    console.log(value)
+   $("option[value='Please select a T-shirt theme']").attr('disabled', 'true')
    //If the user selects "Theme - JS Puns" then the color menu should only display "Cornflower Blue," "Dark Slate Grey," and "Gold."
    if (value === "js puns") {
        $("option[value='tomato']").attr("selected", false);
