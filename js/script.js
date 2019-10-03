@@ -9,7 +9,13 @@ $('#paymentMsg').hide();
 $('#nameMsg').hide();
 $("#select_theme").hide();
 $('#EmailMsg').hide();
+
+(function() {
+    debugger;
+    console.log(this )
+})()
 $( "#title" ).change(function(x) {
+    debugger;
     if( $(this).val() === 'other'){
       $('#other-title').show();
     }else {
@@ -132,7 +138,7 @@ var paymentOptionSelected = 'credit card';
 //Getting each payment option to show while hiding the other two payment options.
 $('#payment').change(function(){
     $('#paymentMsg').hide();
-  if( $(this).find(":selected").val() === 'paypal')
+  if( $(this).find(":selected").val() === 'paypal') //for option elements, .find(": selected") Selector means search for/find all options with the selected value, .val means get value, if payment message is selected, get the value
   {
     $('#paypalMsg').show();
     $('#credit-card').hide();
